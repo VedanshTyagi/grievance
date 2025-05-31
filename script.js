@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function sendGrievanceByEmail(grievanceData) {
   const jsonText = JSON.stringify(grievanceData, null, 2);
-  alert("Sending grievance data via email:");
   const templateParams = {
     message: jsonText
   };
