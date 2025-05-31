@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit a Grievance 🌹</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: url('bg.jpeg') no-repeat center center/cover;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .grievance-box {
+      background-color: rgba(255, 192, 203, 0.9);
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .grievance-input, .grievance-textarea, .grievance-select {
+      width: 90%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      background-color: #ff3399;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #e60073;
+    }
+
+    label {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="grievance-box">
+    <h1>Submit a Grievance 🌹</h1>
+    <form id="grievanceForm">
+      <input type="text" id="title" placeholder="Title" class="grievance-input" required>
+      <textarea id="description" placeholder="What's bothering you?" class="grievance-textarea" rows="4" required></textarea>
+      
+      <label>Mood:</label>
+      <select id="mood" class="grievance-select" required>
+        <option>😠</option>
+        <option>😢</option>
+        <option>😤</option>
+        <option>🥺</option>
+        <option>😐</option>
+      </select>
+
+      <label>Severity:</label>
+      <select id="severity" class="grievance-select" required>
+        <option>A chunky kitkat would fix this 😈</option>
+        <option>This requires a tight hug 🫂</option>
+        <option>I need serious pampering 💆</option>
+        <option>Just wanted to rant 🗣️</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Submit 💌</button>
+    </form>
+  </div>
+  <script type="module" src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("S-bYepgOsdQ6K456i");
+    })();
+  </script>
+</body>
+</html>
